@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello world from actions"
-      - run: echo "This is a test for actions"
-      - run: echo "This is a test for actions"
+      - run: |
+          echo "Este archivo fue creado por el workflow." > file1.txt
+          echo "Contenido escrito en file1.txt"
+      - run: cat file1.txt
