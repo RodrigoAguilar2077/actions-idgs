@@ -1,9 +1,9 @@
 name: Hello world actions
-on : [push]
+on: [push]
 jobs:
-hello_world_actions:
-runs-on: ubuntu-latest
-steps:
-- run: echo "Hello world from actions"
-- run: echo "This is a test for actions"
-- run: echo "This is a test for actions"
+  hello_world_actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world from actions"
+      - run: echo "This is a test for actions"
+      - run: echo "This is a test for actions"
