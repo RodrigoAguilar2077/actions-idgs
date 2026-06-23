@@ -1,0 +1,14 @@
+name: Run python script
+on: [push]
+jobs:
+  run_python_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inicio
+        run: echo "Iniciando el workflow para ejecutar el script de Python."
+      - name: Clona repo
+        uses: actions/checkout@v6
+      - name: Ejecuta script de Python
+        run: |
+          echo "Ejecutando el script de Python..."
+          python app.py
