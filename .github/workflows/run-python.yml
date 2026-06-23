@@ -2,6 +2,7 @@ name: Run python script
 on: [push]
 jobs:
   run_python_script:
+  runs-javascript-script:
     runs-on: ubuntu-latest
     steps:
       - name: Inicio
@@ -9,6 +10,8 @@ jobs:
       - name: Clona repo
         uses: actions/checkout@v6
       - name: Ejecuta script de Python
-        run: |
-          echo "Ejecutando el script de Python..."
-          python app.py
+        run: ls -al
+      - name: definir variable
+        run: echo "USERNAME=${{github.actor}}" >> $GITHUB_ENV
+      - name: Ejecuta script de Python
+        run: node app.js
